@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='vehicleDealers'>
 
 <head>
     <title>{{appName}}</title>
@@ -10,10 +10,20 @@
     <script src="vendor/angular.min.js"></script>
 </head>
 
-<body>
-    <div class="container">
+<body >
+    <div class="container" ng-controller='mainCtrl'>
+      <div ng-include="'app/navbar/navbar.tpl.html'"></div>
+  <div ng-include="contentTemplate"></div>
     </div>
-
+    <!--login Start-->
+    <script src="app/login/login.js"></script>
+<!--login end-->
+       <!--register Start-->
+    <script src="app/register/register.js"></script>
+<!--register end-->
+    
+<script src="app/app.js"></script>
+    <script src="app/navbar/mainCtrl.js"></script>
 </body>
 
 </html>
